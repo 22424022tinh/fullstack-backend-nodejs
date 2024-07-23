@@ -1,4 +1,58 @@
 .hoidanit
 {
-    width: 500px;
+    width: 400px;
+}
+.form{
+    width: 400px;
+    margin: 0 auto;
+}
+.bnt_home_submit{
+    margin: 0 auto;
+    cursor: pointer;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+  .active{
+    color: cornflowerblue;
+  }
+  th, td {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+/* Create two equal columns that floats next to each other */
+
+.column {
+  float: left;
+  width: 40%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
