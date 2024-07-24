@@ -5,6 +5,12 @@
 .form{
     width: 400px;
     margin: 0 auto;
+    padding-top: 65px;
+}
+.form_update{
+  width: 600px;
+  margin: 0 auto;
+  padding-top: 10px;
 }
 .bnt_home_submit{
     margin: 0 auto;

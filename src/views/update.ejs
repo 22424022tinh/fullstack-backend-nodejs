@@ -1,0 +1,36 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Update user</title>
+</head>
+
+<body>
+    <div class="container">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/update">Update a user</a></li>
+
+        </ul>
+    </div>
+    <div class="container">
+        <div class="form_update">
+            <form action="/update-user" method="POST">
+                <fieldset>
+                    <legend>Update user:</legend>
+                    <label>Email:</label>
+                    <input type="email" id="emailID" name="email" value="<%= userEdit.email %>"><br><br>
+                    <label>Name:</label>
+                    <input type="text" id="nameID" name="name" value="<%= userEdit.name %>"><br><br>
+                    <label>City:</label>
+                    <input type="text" id="cityID" name="city" value="<%= userEdit.city %>"><br><br>
+                    <input type="submit" value="Submit" class="bnt_updateuser_submit">
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
