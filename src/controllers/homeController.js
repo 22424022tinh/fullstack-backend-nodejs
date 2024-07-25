@@ -1,6 +1,6 @@
 
 const connection =require('../config/database')
-const {getAllUsers,getUsersById}=require('../services/CRUDService')
+const {getAllUsers,getUsersById,updateUserById}=require('../services/CRUDService')
 
 const getHomepage= (req,res)=>{
     
@@ -42,13 +42,12 @@ const getPageUpdate=async(req,res)=>{
     return res.render('update.ejs',{userEdit:user}); // x <- y
 }
 const getUpdateUser=async(req,res)=>{
-    let id=req.body.id;
+    let id=req.body.UserId;
     let email=req.body.email;
     let name=req.body.name;
     let city=req.body.city;
-    let [results, fields] = await connection.execute(
-        `UPDATE Users SET email = ?, name = ?, city= ?  WHERE id= ?; `,[email,name,city,id]);
-       return res.send('Update user succeed') 
+    let user=await updateUserById(id,email,name,city);
+    res.redirect('/create');
 }
 module.exports={
     getHomepage,getABC,postCreateUser,getCreateHomepage,getPageUpdate,getUpdateUser

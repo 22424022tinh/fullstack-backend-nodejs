@@ -62,3 +62,6 @@ ul {
   display: table;
   clear: both;
 }
+.d-none{
+  display: none;
+}

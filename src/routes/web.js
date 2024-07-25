@@ -8,6 +8,6 @@ router.get('/abc', getABC)
 router.get('/create', getCreateHomepage)
 router.post('/create-user',postCreateUser);
 router.get('/update/:id',getPageUpdate);
-router.get('/update-user',getUpdateUser);
+router.post('/update-user',getUpdateUser);
 
 module.exports=router // export default
